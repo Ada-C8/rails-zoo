@@ -1,4 +1,12 @@
 <h3> ZOO index</h3>
-<p>
+<!-- <p>
    Animals coming soon!
-</p>
+</p> -->
+
+<% @animals.each do |animal| %>
+  <div class="animal">
+  <strong><%= animal.name%></strong> is a
+  <%= animal.species %> and is <%= animal.age %> years old.
+  </div>
+
+  <% end %>

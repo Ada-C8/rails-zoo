@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
   def index
-  end 
+  @animals =  Animal.all
+  end
 end
