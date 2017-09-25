@@ -5,8 +5,7 @@
 
 <% @animals.each do |animal| %>
   <div class="animal">
-  <strong><%= animal.name%></strong> is a
-  <%= animal.species %> and is <%= animal.age %> years old.
+  <strong><%= link_to animal.name, animal_path(animal.id)%></strong> 
   </div>
 
   <% end %>
