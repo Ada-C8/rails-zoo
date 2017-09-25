@@ -2,3 +2,6 @@
 <p>
 <strong><%= @animal.name %></strong> is a <%= @animal.species %> and is <%= @animal.age %> years old.
 </p>
+<p>
+  <%= link_to "Edit", edit_animal_path(@animal) %>
+</p>
