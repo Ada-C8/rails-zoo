@@ -42,4 +42,12 @@ class AnimalsController < ApplicationController
         render :edit
       end
   end
+
+  def delete
+    animal = Animal.find(params[:id])
+    if animal.destroy
+      redirect_to animals_path
+    else
+    end
+  end
 end
