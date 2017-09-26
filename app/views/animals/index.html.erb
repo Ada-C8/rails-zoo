@@ -5,7 +5,10 @@
 
 <% @animals.each do |animal| %>
   <div class="animal">
-  <strong><%= link_to animal.name, animal_path(animal.id)%></strong> 
+  <strong><%= link_to animal.name, animal_path(animal.id)%></strong>
   </div>
 
   <% end %>
+  <p>
+    <%= link_to "Add an animal to the zoo", animals_new_path %>
+  </p>
