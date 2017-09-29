@@ -37,11 +37,7 @@ class AnimalsController < ApplicationController
   def delete
     animal = Animal.find_by(id: params[:id])
 
-    if animal.destroy
-      redirect_to root_path
-    else
-      render :show
-    end
+    animal.destroy ? (redirect_to root_path) : (render :show)
   end
 
   private
