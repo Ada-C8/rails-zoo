@@ -1,0 +1,13 @@
+<h2>List of all animals</h2>
+
+<ul>
+  <% @animals.each do |animal| %>
+  <li>
+    <strong><%= link_to animal.name, animal_path(animal.id) %></strong>, <%= animal.age %> year old <%= animal.species %>
+  </li>
+  <% end %>
+</ul>
+
+<nav>
+  <%= link_to "Add an animal", new_path %>
+</nav>
